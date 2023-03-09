@@ -11,7 +11,7 @@ let pi = 3.14;
 let pie = 3.14
 
 if(pi === '3.14'){
-    console.log(true);
+    let i = 0
 }else{
     console.log(false);
 }
@@ -122,8 +122,8 @@ function sayHi() {
 
 
 function multiply(num1, num2){
-    // ! explain to me the difference between return and console.log
-    return num1 * num2
+    let i = num1 + num2
+    return i
 }
 let multiplyResult = multiply(2,4);
 console.log(multiplyResult);
