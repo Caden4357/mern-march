@@ -12,6 +12,7 @@ const Nav = (props) => {
             <span>Link</span>
         </div>
     )
+    
 }
 export default Nav;
 
