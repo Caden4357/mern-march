@@ -1,10 +1,11 @@
 import './App.css';
 
-function App() {
+const App = () => {
   // hold data 
   // api calls 
   // other functions
   return (
+    // Return JSX which is converted to real HTML 
     <div className="App">
       <h1>My First React App!</h1>
       <ul>

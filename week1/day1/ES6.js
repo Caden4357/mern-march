@@ -48,8 +48,8 @@ console.log(personCopy, person);
 // * Destructuring: easily pull out values inside an array or object 
 // * rest/spread operator: spread out values inside an array or object we can do this to make copies of the data and also manipulate it this will be a common thing we do in React
 // const age = person.age
-let {name:robert, ...restOfTheObject} = person
-// let {name, age, isMusician} = person
+// let {name:robert, ...restOfTheObject} = person
+let {name, age, isMusician} = person
 console.log(robert);
 console.log(robert, restOfTheObject);
 const updatedPerson = {...person, age:33}
