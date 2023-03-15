@@ -3,8 +3,8 @@
 // * String
 let myName = "Caden";
 
-// * Number 
-let myAge = 25;
+// // * Number 
+// let myAge = 25;
 
 // * Still a Number in JS
 let pi = 3.14;
@@ -31,7 +31,7 @@ let nothing2;
 // * We typically use arrays to contain the same data types but they CAN be mixed. 
 // * You will often see objects stored in arrays 
 // *   indexes  0 1 2 3 4
-let evenNums = [2,4,6,8,10];
+// let evenNums = [2,4,6,8,10];
 
 
 let arrOfNames = ['Caden', 'Ben', 'Amy', 'Lindsey'];
@@ -77,13 +77,35 @@ let employeeAshton =
 console.log(employeeAshton.lectureSchedule.week1.day1);
 console.log(employeeAshton.favHobbies[1]);
 
+
+
+
+
+
 // * if, else if and else syntax 
+
+// * Number 
+let myAge = 18;
+
 if(myAge >= 18){
     console.log('You are old enough welcome in to the club');
 }
 else{
     console.log('Sorry you must be 18 or older to enter the club');
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const highSchoolGrad = true;
 
@@ -94,25 +116,63 @@ else{
     console.log('Sorry you must graduate high school or receive your GED first');
 }
 
-let weekday = "Friday"
 
-if (weekday == "friday"){
+
+
+
+
+
+
+
+
+let weekday = "Unicorn"
+
+if (weekday == "Friday"){
     console.log("Woohoo its the weekend!");
-}else if(weekday == "Saturday"){
+}
+else if(weekday == "Saturday"){
     console.log("One more day to relax!");
-}else{
+}
+else{
     console.log("Time to work!");
 }
 
+
+
+
+
+
+
+
+
+
+
+
 // * for loop syntax 
-for (let i = 0; i <= 10; i++){
+
+
+//     start   condition step
+for (let i = 10; i >= 0; i--){
     console.log(i)
 }
 
+let evenNums = [2,4,6,8,10];
+console.log(evenNums.length);
 // * looping through an array 
 for (let index = 0; index < evenNums.length; index++) {
     console.log(evenNums[index]); 
 }
+
+
+
+
+
+
+
+
+
+
+
 
 // * function syntax
 

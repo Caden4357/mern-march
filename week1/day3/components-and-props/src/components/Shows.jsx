@@ -1,4 +1,5 @@
 import React from 'react';
+import './Shows.css'
 
 const Shows = (props) => {
     console.log(props.title);
@@ -7,6 +8,7 @@ const Shows = (props) => {
         <div className='bg-primary'>
             <h2>Title: {props.title}</h2>
             <h3>Released in: {props.releaseYear}</h3>
+            <button className='custom-btn'>Add</button>
         </div>
     );
 }

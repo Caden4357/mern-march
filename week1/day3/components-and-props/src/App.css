@@ -1,3 +1,16 @@
 .App {
   text-align: center;
 }
+.custom-btn{
+  background-color: blue;
+  color: white;
+}
+.d-flex{
+  display: flex;
+}
+.jc-between{
+  justify-content: space-between;
+}
+.align-center{
+  align-items: center;
+}
