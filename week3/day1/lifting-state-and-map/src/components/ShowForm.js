@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import './Form.css'
 const ShowForm = (props) => {
+
+    // console.log(props);
+    // const [showList, setShowList] = useState([])
+    const {showList, setShowList} = props
     const [show, setShow] = useState({
         title:'',
         releaseYear:1920,
@@ -12,9 +16,21 @@ const ShowForm = (props) => {
         // setShow(prevState => ({...prevState, [e.target.name]:e.target.value }))
     }
 
+    const submitHandler = (e) => {
+        e.preventDefault()
+        // console.log('This is the new show' + show);
+        // console.log(`this is the new show ${JSON.stringify(show)}`);
+        setShowList([...showList, show])
+        setShow({
+            title:'',
+            releaseYear:1920,
+            genre:''
+        })
+    }
+
     return (
         <div>
-            <form className='show-form'>
+            <form className='show-form' onSubmit={submitHandler}>
                 <h1>Add Your Favorite TV Show!📺</h1>
 
                 <div>

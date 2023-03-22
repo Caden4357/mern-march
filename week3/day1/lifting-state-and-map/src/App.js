@@ -1,10 +1,13 @@
-import './App.css';
 import ShowForm from './components/ShowForm'
+import { useState } from 'react';
+import DisplayShows from './components/DisplayShows';
 
 function App() {
+  const [showList, setShowList] = useState([])
   return (
     <div className="App">
-      <ShowForm/>
+      <ShowForm showList={showList} setShowList={setShowList}/>
+      <DisplayShows showList={showList} setShowList={setShowList}/>
     </div>
   );
 }
