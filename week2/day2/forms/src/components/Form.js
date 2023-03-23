@@ -17,6 +17,7 @@ const Form = (props) => {
     const handleGenre = (event) => {
         setGenre(event.target.value)
     }
+    
     return (
         <div>
             <form>
