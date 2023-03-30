@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="App">
-      <ShowForm showList={showList} setShowList={setShowList} test={test}/>
+      <ShowForm showList={showList} setShowList={setShowList}/>
       <DisplayShows showList={showList} setShowList={setShowList}/>
     </div>
   );
