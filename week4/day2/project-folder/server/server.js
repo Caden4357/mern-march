@@ -9,13 +9,14 @@ app.use( express.urlencoded({ extended: true }) );
 // ! List of instructions
 app.get("/api", (request, response) => {
     response.json({ message: "Welcome to the bank of Caden" });
-    response.json({})
 });
 
 app.post("/api/postData", (request, response) => {
     console.log(request.body);
     response.json({requestBody: request.body})
 })
+
+app.get("/api/")
 
 
 
