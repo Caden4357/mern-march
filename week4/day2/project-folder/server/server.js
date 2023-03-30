@@ -13,9 +13,8 @@ app.get("/api", (request, response) => {
 });
 
 app.post("/api/postData", (request, response) => {
-
     console.log(request.body);
-    response.json({unicorn: request.body})
+    response.json({requestBody: request.body})
 })
 
 
