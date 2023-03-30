@@ -1,14 +1,19 @@
 let n = 5;
 // * Build a function that returns an array of integers from n to 1 where n>0.
 // * Example : n=5 --> returns [5,4,3,2,1]
-
+for (let num = n; num > 0 ; num--){
+    console.log(num);
+}
 
 
 
 
 // * Build a function that returns an array of integers from 1 to n but with every number multiplied by two 
 // * Example: n=5 --> returns [2,4,6,8,10]
-
+for (let num = 1; num <= n; num++){
+    console.log(num*2);
+   
+}
 
 
 
