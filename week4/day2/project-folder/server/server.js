@@ -16,7 +16,7 @@ app.post("/api/postData", (request, response) => {
     response.json({requestBody: request.body})
 })
 
-app.get("/api/")
+
 
 
 
