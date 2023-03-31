@@ -17,7 +17,7 @@ const users = [
 
 // ! List of instructions AKA our routes and controllers
 
-// ! Request is an object and if the user passes in any data whether that data comes from a form or a parameter in the url it will be in the request object 
+// ! Request is an object and if the user passes in any data whether that data comes from a form or a parameter in the url it will be in the request object (Form data goes in request.body url params go in request.params When in doubt console log it out!)
 // ! Response is what we send back to the client you will always send back json in this class 
 app.get("/api/users", (request, response) => {
     response.json(users);
