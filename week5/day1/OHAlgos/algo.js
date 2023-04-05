@@ -55,12 +55,3 @@ const deckOfCards = () => {
 }
 
 
-
-// ? Given a string, return true if the string is a palindrome, and false otherwise.
-// * Palindrome means the word is the same read backwards example mom, dad, racecar, kayak are all palindrome but racecars, fast, hug are examples that are not palindrome
-
-const palindrome = (str) => {
-    // * Your code goes here
-}
-const isPalindrome = palindrome('kayak'); // should return true
-const isPalindrome2 = palindrome('racecars'); // should return false 
