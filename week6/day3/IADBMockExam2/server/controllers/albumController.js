@@ -1,24 +1,48 @@
 const Album = require('../models/albumModels');
 
+
+
 module.exports = {
-    findAllAlbums: (req, res) => {
-        Album.find()
-            .then((allAlbums) => {
-                res.status(200).json(allAlbums)
-            })
-            .catch((err) => {
-                res.status(400).json(err)
-            })
+    // findAllAlbums: (req, res) => {
+    //     Album.find()
+    //         .then((allAlbums) => {
+    //             res.status(200).json(allAlbums)
+    //         })
+    //         .catch((err) => {
+    //             res.status(400).json(err)
+    //         })
+    // },
+
+    findAllAlbums: async (req, res) => {
+        try{
+            const allAlbums = await Album.find();
+            console.log(allAlbums);
+            res.status(200).json(allAlbums)
+        }
+        catch(err){
+            res.status(400).json(err)
+        }
     },
-    createAlbum: (req, res) => {
-        Album.create(req.body)
-            .then((newAlbum) => {
-                res.status(200).json(newAlbum)
-            })
-            .catch((err) => {
-                res.status(400).json(err)
-            })
+    // createAlbum: (req, res) => {
+    //     Album.create(req.body)
+    //         .then((newAlbum) => {
+    //             res.status(200).json(newAlbum)
+    //         })
+    //         .catch((err) => {
+    //             res.status(400).json(err)
+    //         })
+    // },
+
+    createAlbum: async (req, res) => {
+        try{
+            const newAlbum = await Album.create(req.body);
+            res.status(201).json(newAlbum);
+        }
+        catch(err){
+            res.status(400).json(err)
+        }
     },
+    // ! Try to convert the remaining 3 controller functions to async/await 
     findOneAlbum: (req, res) => {
         Album.findOne({_id: req.params.id})
             .then((oneAlbum) => {

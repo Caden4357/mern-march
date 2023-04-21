@@ -33,8 +33,8 @@ function App() {
             album={album} 
             setAlbum={setAlbum} 
             errors={errors} 
-            setErrors={setErrors}
-          />} />
+            setErrors={setErrors}/>} 
+          />
         </Routes>
       </BrowserRouter>
     </div>
