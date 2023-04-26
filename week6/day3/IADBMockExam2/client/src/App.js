@@ -6,6 +6,8 @@ import Nav from './components/Nav';
 import CreateAlbum from './components/CreateAlbum';
 import OneAlbum from './components/OneAlbum';
 import EditAlbum from './components/EditAlbum';
+import Login from './components/Login'
+import Register from './components/Register';
 
 function App() {
   const [album, setAlbum] = useState({
@@ -22,13 +24,15 @@ function App() {
         <Nav />
         <Routes>
           <Route path='/' element={<Display />} />
+          <Route path='/login' element={<Login/>}/>
+          <Route path='/register' element={<Register/>}/>
           <Route path='/createAlbum/form' element={<CreateAlbum 
             album={album} 
             setAlbum={setAlbum} 
             errors={errors} 
             setErrors={setErrors}/>} 
           />
-          <Route path='/oneAlbum/:id' element={<OneAlbum />} />
+          <Route path='/oneAlbum/:id' element={ <OneAlbum />} />
           <Route path='/editAlbum/:id' element={<EditAlbum 
             album={album} 
             setAlbum={setAlbum} 

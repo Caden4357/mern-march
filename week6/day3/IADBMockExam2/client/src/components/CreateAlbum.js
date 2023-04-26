@@ -7,7 +7,7 @@ const CreateAlbum = (props) => {
     const navigate = useNavigate()
     const submitHandler = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:8000/api/newAlbum', album)
+        axios.post('http://localhost:8000/api/newAlbum', album, {withCredentials:true})
             .then((res) => {
                 console.log(res);
                 navigate('/')

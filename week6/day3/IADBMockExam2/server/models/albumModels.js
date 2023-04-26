@@ -26,6 +26,9 @@ const AlbumSchema = new mongoose.Schema({
     explicit:{
         type:Boolean,
         required:[true, 'You must fill this out']
+    },
+    user_id: {
+        type:mongoose.Types.ObjectId
     }
 }, {timestamps:true})
 

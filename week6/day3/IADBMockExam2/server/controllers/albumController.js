@@ -16,7 +16,6 @@ module.exports = {
     findAllAlbums: async (req, res) => {
         try{
             const allAlbums = await Album.find();
-            console.log(allAlbums);
             res.status(200).json(allAlbums)
         }
         catch(err){
