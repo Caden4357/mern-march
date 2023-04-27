@@ -13,7 +13,8 @@ const AlbumForm = (props) => {
 
     return (
         <div>
-            <form className='w-25' onSubmit={submitHandler}>
+            <h2>Post your favorite album</h2>
+            <form className='col-4 mx-auto' onSubmit={submitHandler}>
                 <label className='form-label'>Album Name:</label>
                 <input className='form-control' type="text" onChange={changeHandler} value={album.albumName} name='albumName' />
                 {

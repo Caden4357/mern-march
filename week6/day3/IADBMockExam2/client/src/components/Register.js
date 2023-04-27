@@ -30,26 +30,26 @@ const Register = (props) => {
     }
     return (
         <div>
-            <form onSubmit={submitHandler}>
+            <form className='col-4 mx-auto' onSubmit={submitHandler}>
                 <div>
-                    <label>First Name: </label>
-                    <input type="text" onChange={changeHandler} value={user.firstName} name='firstName'/>
+                    <label className='form-label'>First Name: </label>
+                    <input className='form-control' type="text" onChange={changeHandler} value={user.firstName} name='firstName'/>
                 </div>
                 <div>
-                    <label>Last Name: </label>
-                    <input type="text" onChange={changeHandler} value={user.lastName} name='lastName'/>
+                    <label className='form-label'>Last Name: </label>
+                    <input className='form-control' type="text" onChange={changeHandler} value={user.lastName} name='lastName'/>
                 </div>
                 <div>
-                    <label>Email: </label>
-                    <input type="text" onChange={changeHandler} value={user.email} name='email'/>
+                    <label className='form-label'>Email: </label>
+                    <input className='form-control' type="text" onChange={changeHandler} value={user.email} name='email'/>
                 </div>
                 <div>
-                    <label>Password: </label>
-                    <input type="password" onChange={changeHandler} value={user.password} name='password'/>
+                    <label className='form-label'>Password: </label>
+                    <input className='form-control' type="password" onChange={changeHandler} value={user.password} name='password'/>
                 </div>
                 <div>
-                    <label>Confirm Password: </label>
-                    <input type="password" onChange={changeHandler} value={user.confirmPassword} name='confirmPassword'/>
+                    <label className='form-label'>Confirm Password: </label>
+                    <input className='form-control' type="password" onChange={changeHandler} value={user.confirmPassword} name='confirmPassword'/>
                 </div>
                 <button>Register</button>
             </form>

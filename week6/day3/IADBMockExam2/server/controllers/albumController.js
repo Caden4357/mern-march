@@ -1,5 +1,5 @@
 const Album = require('../models/albumModels');
-
+const jwt = require('jsonwebtoken');
 
 
 module.exports = {
@@ -22,6 +22,18 @@ module.exports = {
             res.status(400).json(err)
         }
     },
+    allAlbumsByLoggedInUser: async (req, res) => {
+        try{
+            const decodedJwt = jwt.decode(req.cookies.userToken, {complete:true})
+            const user_id = decodedJwt.payload._id
+            const albums = await Album.find({user_id:user_id})
+            res.status(200).json(albums)
+            // console.log('DECODED JWT ID', decodedJwt.payload._id);
+        }
+        catch(err){
+            res.status(400).json(err)
+        }
+    },
     // createAlbum: (req, res) => {
     //     Album.create(req.body)
     //         .then((newAlbum) => {
@@ -34,7 +46,11 @@ module.exports = {
 
     createAlbum: async (req, res) => {
         try{
-            const newAlbum = await Album.create(req.body);
+            const decodedJwt = jwt.decode(req.cookies.userToken, {complete:true})
+            console.log('DECODED JWT ID', decodedJwt.payload._id);
+            const album = {...req.body, user_id:decodedJwt.payload._id}
+            console.log('FINALIZED ALBUM', album);
+            const newAlbum = await Album.create(album);
             res.status(201).json(newAlbum);
         }
         catch(err){

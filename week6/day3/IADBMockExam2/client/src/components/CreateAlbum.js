@@ -14,7 +14,7 @@ const CreateAlbum = (props) => {
             })
             .catch((err) => {
                 console.log(err);
-                setErrors(err.response.data.errors)
+                // setErrors(err.response.data.errors)
             })
     }
     return (

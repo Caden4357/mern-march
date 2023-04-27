@@ -8,6 +8,7 @@ import OneAlbum from './components/OneAlbum';
 import EditAlbum from './components/EditAlbum';
 import Login from './components/Login'
 import Register from './components/Register';
+import Profile from './components/Profile';
 
 function App() {
   const [album, setAlbum] = useState({
@@ -39,6 +40,7 @@ function App() {
             errors={errors} 
             setErrors={setErrors}/>} 
           />
+          <Route path='/profile' element={<Profile/>}/>
         </Routes>
       </BrowserRouter>
     </div>

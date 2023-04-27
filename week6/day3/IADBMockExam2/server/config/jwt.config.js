@@ -11,9 +11,9 @@ module.exports.authenticate = (req, res, next) => {
             res.status(401).json({verified: false})
         }
         else{
-            console.log('Authenticated')
+            // console.log('Authenticated')
             // req.user = payload._id
-            console.log('PAYLOAD', payload);
+            // console.log('PAYLOAD', payload);
             next()
         }
     })

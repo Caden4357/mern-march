@@ -14,15 +14,16 @@ const Nav = (props) => {
             })
     }
     return (
-        <div className='d-flex justify-content-evenly align-items-center'>
+        <div className='d-flex justify-content-evenly align-items-center border'>
             <h1>Records Dot Com</h1>
-            <div>
+            <div className='w-50 d-flex justify-content-evenly align-items-center'>
                 <Link to={'/createAlbum/form'}>Post an album</Link>
                 <br />
                 <Link to={'/'}>Home</Link>
+                <Link to={'/profile'}>Profile</Link>
+                <Link to={'/login'}>Login</Link>
+                <button onClick={logout}>Logout</button>
             </div>
-            <Link to={'/login'}>Login</Link>
-            <button onClick={logout}>Logout</button>
         </div>
 )}
 
